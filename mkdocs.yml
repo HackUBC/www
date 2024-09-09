@@ -1,0 +1,38 @@
+site_name: HackUBC
+theme:
+  name: material
+  palette:
+    scheme: ubc
+  features:
+    - navigation.tabs
+    - header.autohide
+    - search.suggest
+    - search.highlight
+extra_css:
+  - stylesheets/theme.css
+  - stylesheets/custom.css
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+copyright: Copyright &copy; 2024 - 2024 HackUBC by Yuuta and Winslow is licensed under CC BY-NC-SA 4.0 
+repo_url: https://www.github.com/HackUBC/HackUBC.git
+repo_name: HackUBC/www.git
+nav:
+  - Home:
+    - index.md
+  - Software:
+    - software/index.md
+    - software/samail.md
+    - CWL:
+      - software/cwl.md
+  - Network:
+    - network/index.md
+    - network/wifi.md
+    - network/vpn.md
+    - network/routing.md
+  - Radio:
+    - radio/index.md
+    - radio/dmr.md
+  - Electrical:
+    - electrical/index.md
