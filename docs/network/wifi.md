@@ -37,6 +37,7 @@ network={
 	phase1="peaplabel=0"
 	phase2="auth=MSCHAPV2"
 	mesh_fwding=1
+	ieee80211w=1
 }
 
 network={
@@ -50,11 +51,15 @@ network={
 	domain_match="secure.wireless.ubc.ca"
 	phase1="peaplabel=0"
 	phase2="auth=MSCHAPV2"
-	mesh_fwding=1
+	ieee80211w=1
 }
 ```
 
 > The `P` after `password=` escapes any special characters (excluding `"`) in the password string. Read more on wpa_supplicant manual.
+
+## 802.11w
+
+A few APs (namely the ones in SWNG building) require 802.11w to be enabled. By default, `wpa_supplicant` disables this feature, so it cannot connect to `ubcsecure` or `eduroam` in SWNG with error `skip RSN IE - no mgmt frame protection enabled but AP requires it`. We need to set `ieee80211w=` to `1` or `2` to enable this feature. Read more on https://wiki.archlinux.org/title/Wpa_supplicant#Debugging_connection_failures and the default wpa_supplicant.conf comments.
 
 ## IP
 
